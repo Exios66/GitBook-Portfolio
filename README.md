@@ -11,20 +11,20 @@ Welcome! This GitHub repository serves as an evolving digital portfolio and gall
   <a href="https://github.com/Exios66/JJB_Gallery/actions/workflows/pages/pages-build-deployment">
     <img alt="Pages Build Deployment" src="https://github.com/Exios66/JJB_Gallery/actions/workflows/pages/pages-build-deployment/badge.svg">
   </a>
-  <a href="https://github.com/Exios66/JJB_Gallery/blob/main/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/Exios66/JJB_Gallery?style=flat-square">
+  <a href="https://github.com/Exios66/GitBook-Portfolio/blob/main/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/Exios66/GitBook-Portfolio?style=flat-square">
   </a>
-  <a href="https://github.com/Exios66/JJB_Gallery/releases">
-    <img alt="Latest Release" src="https://img.shields.io/github/v/release/Exios66/JJB_Gallery?style=flat-square&logo=github&label=Version">
+  <a href="https://github.com/Exios66/GitBook-Portfolio/releases">
+    <img alt="Latest Release" src="https://img.shields.io/github/v/release/Exios66/GitBook-Portfoliostyle=flat-square&logo=github&label=Version">
   </a>
-  <a href="https://github.com/Exios66/JJB_Gallery/stargazers">
-    <img alt="Stars" src="https://img.shields.io/github/stars/Exios66/JJB_Gallery?style=flat-square">
+  <a href="https://github.com/Exios66/GitBook-Portfolio/stargazers">
+    <img alt="Stars" src="https://img.shields.io/github/stars/Exios66/GitBook-Portfoliostyle=flat-square">
   </a>
-  <a href="https://github.com/Exios66/JJB_Gallery/issues">
+  <a href="https://github.com/Exios66/GitBook-Portfolio/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/Exios66/JJB_Gallery?style=flat-square">
   </a>
-  <a href="https://github.com/Exios66/JJB_Gallery/commits/main">
-    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Exios66/JJB_Gallery?style=flat-square">
+  <a href="https://github.com/Exios66/GitBook-Portfolio/commits/main">
+    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Exios66/GitBook-Portfoliostyle=flat-square">
   </a>
 </p>
 
@@ -71,8 +71,8 @@ This living portfolio highlights select projects in engineering, data analysis, 
 
 ## 📂 Repository Map
 
-<img alt="GitHub Tag" src="https://img.shields.io/github/v/tag/Exios66/JJB_Gallery?include_prereleases&sort=date&style=social">
-<img alt="GitHub Release" src="https://img.shields.io/github/v/release/Exios66/JJB_Gallery?include_prereleases&sort=date&display_name=release&style=social">
+<img alt="GitHub Tag" src="https://img.shields.io/github/v/tag/Exios66/GitBook-Portfolio?include_prereleases&sort=date&style=social">
+<img alt="GitHub Release" src="https://img.shields.io/github/v/release/Exios66/GitBook-Portfolio?include_prereleases&sort=date&display_name=release&style=social">
 
   ```bash
   JJB_Gallery (gh-pages branch)

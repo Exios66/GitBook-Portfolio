@@ -15,13 +15,13 @@ Welcome! This GitHub repository serves as an evolving digital portfolio and gall
     <img alt="License: MIT" src="https://img.shields.io/github/license/Exios66/GitBook-Portfolio?style=flat-square">
   </a>
   <a href="https://github.com/Exios66/GitBook-Portfolio/releases">
-    <img alt="Latest Release" src="https://img.shields.io/github/v/release/Exios66/GitBook-Portfoliostyle=flat-square&logo=github&label=Version">
+    <img alt="Latest Release" src="https://img.shields.io/github/v/release/Exios66/GitBook-Portfolio?style=flat-square&logo=github&label=Version">
   </a>
   <a href="https://github.com/Exios66/GitBook-Portfolio/stargazers">
-    <img alt="Stars" src="https://img.shields.io/github/stars/Exios66/GitBook-Portfoliostyle=flat-square">
+    <img alt="Stars" src="https://img.shields.io/github/stars/Exios66/GitBook-Portfolio?style=flat-square">
   </a>
   <a href="https://github.com/Exios66/GitBook-Portfolio/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/Exios66/JJB_Gallery?style=flat-square">
+    <img alt="Issues" src="https://img.shields.io/github/issues/Exios66/GitBook-Portfolio?style=flat-square">
   </a>
   <a href="https://github.com/Exios66/GitBook-Portfolio/commits/main">
     <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Exios66/GitBook-Portfolio?style=flat-square">
@@ -75,33 +75,18 @@ This living portfolio highlights select projects in engineering, data analysis, 
 <img alt="GitHub Release" src="https://img.shields.io/github/v/release/Exios66/GitBook-Portfolio?include_prereleases&sort=date&display_name=release&style=social">
 
   ```bash
-  JJB_Gallery (gh-pages branch)
+  GitBook Portfolio (main branch)
   ├── index.html
   ├── theme-switcher.html
   ├── search.json
-  ├── CHANGELOG.html
-  ├── SECURITY.html
-  ├── _build/
-  │   └── quarto/
-  │       ├── site_libs/        # Quarto & JS/CSS site assets
-  │       ├── index_files/       # Quarto-generated HTML dependencies
-  │       └── randomforest_files/ # Notebook render assets
-  ├── assets/
-  │   └── css/                   # Theme stylesheets
   ├── projects/
-  │   ├── CrewAI/                # Multi-agent system (renamed from Crewai)
-  │   ├── terminal_agents/
-  │   └── ...                    # Other project directories
-  ├── notebooks/
-  │   └── SciKit/                # Jupyter notebooks (moved from Jupyter/)
-  ├── Quarto/
-  │   └── randomforest.qmd       # Quarto documents
-  ├── docs/
-  │   └── (documentation sources)
+  │   ├── agentswarm/
+  │   ├── terminal_agents
+  │   ├── chat_ui
+  │   ├── random_forests
+  │   └── NATD # The Neural Architecture of Truth and Deception Research Project & Directive
   ├── scripts/
   │   └── (helper or build scripts)
-  ├── _quarto.yml
-  ├── index.qmd
   ├── requirements/
   │   ├── requirements.txt
   │   ├── requirements-minimal.txt

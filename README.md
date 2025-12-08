@@ -24,7 +24,7 @@ Welcome! This GitHub repository serves as an evolving digital portfolio and gall
     <img alt="Issues" src="https://img.shields.io/github/issues/Exios66/JJB_Gallery?style=flat-square">
   </a>
   <a href="https://github.com/Exios66/GitBook-Portfolio/commits/main">
-    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Exios66/GitBook-Portfoliostyle=flat-square">
+    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Exios66/GitBook-Portfolio?style=flat-square">
   </a>
 </p>
 
@@ -60,7 +60,7 @@ Welcome! This GitHub repository serves as an evolving digital portfolio and gall
 
 Hi! I'm **Jack J. Burleson** – I am a data scientist, artificial intelligence-research engineer, a computational neuroscience researcher, and an open-source enthusiast.  
 
-I am passionate about fully expanding the notion of making data science, machine learning, and advanced statistical analytics democratically accessible and meaningful through clear code examples, integrations, and insightful visualizations.  
+I am passionate about broadening the traditional definitions of data science, in addition to distilling complex machine learning concepts and advanced statistical analytics democratically accessible, tangible, and meaningful through thoughtful discussion, wisdom passed onto me, and insightful visualizations.  
 
 This living portfolio highlights select projects in engineering, data analysis, machine learning, and technical writing.
 

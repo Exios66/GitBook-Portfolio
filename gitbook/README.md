@@ -1,4 +1,8 @@
-# README
+---
+icon: bat
+---
+
+# Landing Page
 
 [![GitHub](https://img.shields.io/badge/github-100000?style=for-the-badge\&logo=GitHub\&logoColor=E63786\&labelColor=black\&color=black)](https://github.com/Exios66)
 
@@ -198,16 +202,16 @@ The repository follows a modular architecture designed for interoperability and 
 * [CrewAI System](/broken/pages/9833a9c14a9db6120496fae085e9919857d513d5)
 * [Terminal Agents](/broken/pages/f0162fa1ec76503ed24a73f97c7cd49a631f4e3f)
 * [Documentation Index](/broken/pages/1debacff0870a71d93f50a7fab07ec4309018e0a) - Comprehensive documentation
-* [CHANGELOG.md](/broken/pages/d532a8f3864e3e0ccd0e19ee7c00119fdb4b8509)
+* [CHANGELOG.md](docs/changelog.md)
 
 ## 📚 Documentation
 
 Comprehensive documentation is available in the [`docs/`](/broken/pages/18688bb33204805ec90d35badd6ca076ad73980c) directory:
 
-* [**Setup & Configuration**](/broken/pages/9a382109f8979080de0192c8dc5b35a2cfb64caa) - Setup guides and configuration
+* [**Setup & Configuration**](docs/setup_guide.md) - Setup guides and configuration
 * [**Development**](/broken/pages/c2719d7d005f70f5bf1f230a98288783bfd076dc) - Development guides
-* [**Security**](/broken/pages/c0d45804786cfa5cc58cdd8f722d95182c0393ba) - Security policies
-* [**Scripts**](/broken/pages/bcccc4e759378c3c112410f45e78e0f8d93f40d0) - Script documentation
-* [**Projects**](/broken/pages/446756191ce9766c4330a4c126810f3521689a78) - Project-specific documentation
+* [**Security**](docs/security-policy.md) - Security policies
+* [**Scripts**](docs/scripts-documentation.md) - Script documentation
+* [**Projects**](projects/) - Project-specific documentation
 
 ***

@@ -1,6 +1,12 @@
 # Table of contents
 
-* [README](README.md)
+* [Landing Page](README.md)
+* [PROJECTS](projects/README.md)
+  * [Terminal Agents](projects/terminal-agents.md)
+  * [RAG Model](projects/rag-model.md)
+  * [README](projects/readme.md)
+  * [iOS Chatbot](projects/ios-chatbot.md)
+  * [API Reference](projects/api-reference.md)
 
 ## docs
 
@@ -17,13 +23,7 @@
 * [index](index.md)
 * [404](404.md)
 * [accessibility](accessibility.md)
-* [PROJECTS](projects/README.md)
-  * [Terminal Agents](projects/terminal-agents.md)
-  * [RAG Model](projects/rag-model.md)
-  * [README](projects/readme.md)
-  * [iOS Chatbot](projects/ios-chatbot.md)
-  * [API Reference](projects/api-reference.md)
-* [README](readme-1.md)
+* [README](readme.md)
 * [dependencies](dependencies.md)
 * [\_Sidebar](_sidebar.md)
 * [Testing Guide](testing-guide.md)

@@ -1,217 +1,458 @@
----
-icon: bat
----
+# README
 
-# Landing Page
+A comprehensive terminal-based AI agent for code assistance, similar to OpenCode. Provides AI-powered code analysis, generation, explanation, and debugging directly from your terminal.
 
-[![GitHub](https://img.shields.io/badge/github-100000?style=for-the-badge\&logo=GitHub\&logoColor=E63786\&labelColor=black\&color=black)](https://github.com/Exios66)
+## 🚀 Features
 
-Welcome! This GitHub repository serves as an evolving digital portfolio and gallery for **Jack J. Burleson**, showcasing a curated selection of previous work, open-source projects, previous research focuses, and presentations.
+* **Multi-Provider LLM Support**: OpenAI, Anthropic Claude, Ollama (free/local), Google, Azure
+* **Code Analysis**: Analyze code files for issues, security vulnerabilities, and improvements
+* **Code Explanation**: Get detailed explanations of code functionality
+* **Code Generation**: Generate code from natural language descriptions
+* **Code Fixing**: Fix bugs and improve code quality
+* **Code Refactoring**: Refactor code for better maintainability
+* **Interactive Chat**: Real-time chat interface with conversation history
+* **Rich Terminal UI**: Beautiful terminal interface with colors, markdown, and syntax highlighting
+* **File Operations**: Read, analyze, and work with code files
+* **Configuration Management**: YAML config files and environment variables
 
-***
+## 📋 Prerequisites
 
-<p align="center"><a href="https://github.com/Exios66/JJB_Gallery/actions/workflows/pages/pages-build-deployment"><img src="https://github.com/Exios66/JJB_Gallery/actions/workflows/pages/pages-build-deployment/badge.svg" alt="Pages Build Deployment"> </a><a href="../LICENSE"><img src="https://img.shields.io/github/license/Exios66/GitBook-Portfolio?style=flat-square" alt="License: MIT"> </a><a href="https://github.com/Exios66/GitBook-Portfolio/releases"><img src="https://img.shields.io/github/v/release/Exios66/GitBook-Portfolio?style=flat-square&#x26;logo=github&#x26;label=Version" alt="Latest Release"> </a><a href="https://github.com/Exios66/GitBook-Portfolio/stargazers"><img src="https://img.shields.io/github/stars/Exios66/GitBook-Portfolio?style=flat-square" alt="Stars"> </a><a href="https://github.com/Exios66/GitBook-Portfolio/issues"><img src="https://img.shields.io/github/issues/Exios66/GitBook-Portfolio?style=flat-square" alt="Issues"> </a><a href="https://github.com/Exios66/GitBook-Portfolio/commits/main"><img src="https://img.shields.io/github/last-commit/Exios66/GitBook-Portfolio?style=flat-square" alt="Last Commit"></a></p>
+* Python 3.8+
+* At least one LLM provider configured:
+  * **Ollama** (Recommended - Free, local): [Install Ollama](https://ollama.ai/)
+  * **OpenAI API Key**: [Get API Key](https://platform.openai.com/api-keys)
+  * **Anthropic API Key**: [Get API Key](https://console.anthropic.com/)
+  * **Google API Key**: [Get API Key](https://makersuite.google.com/app/apikey)
+  * **Azure OpenAI**: Configure Azure endpoint
 
-***
+## 🛠️ Installation
 
-## About Me
-
-![image](<.gitbook/assets/a0d994ed 46e0 4185 886e 5568c9561843>)
-
-Hi! I'm **Jack J. Burleson** – I am a data scientist, artificial intelligence-research engineer, a computational neuroscience researcher, and an open-source enthusiast.
-
-I am passionate about broadening the traditional definitions of data science, in addition to distilling complex machine learning concepts and advanced statistical analytics democratically accessible, tangible, and meaningful through thoughtful discussion, wisdom passed onto me, and insightful visualizations.
-
-This living portfolio highlights select projects in engineering, data analysis, machine learning, and technical writing.
-
-![GitHub User's stars](https://img.shields.io/github/stars/Exios66?style=social) ![GitHub followers](https://img.shields.io/github/followers/Exios66?style=social)
-
-***
-
-## **📂 Repository Map**
-
-![GitHub Tag](https://img.shields.io/github/v/tag/Exios66/GitBook-Portfolio?include_prereleases\&sort=date\&style=social) ![GitHub Release](https://img.shields.io/github/v/release/Exios66/GitBook-Portfolio?include_prereleases\&sort=date\&display_name=release\&style=social)
+### Quick Setup
 
 ```bash
-GitBook Portfolio (main branch)
-├── index.html
-├── theme-switcher.html
-├── search.json
-├── projects/
-│   ├── agentswarm/
-│   ├── terminal_agents
-│   ├── chat_ui
-│   ├── random_forests
-│   └── NATD # The Neural Architecture of Truth and Deception Research Project & Directive
-├── scripts/
-│   └── (helper or build scripts)
-├── requirements/
-│   ├── requirements.txt
-│   ├── requirements-minimal.txt
-│   └── requirements-micro.txt
-├── config/
-│   └── pip.conf
-├── docs/
-│   ├── QUICK_START.md
-│   └── setup/
-│       ├── NPM_SETUP.md
-│       ├── EXTERNAL_STORAGE_SETUP.md
-│       └── ...
-├── LICENSE
-├── README.md
-├── CHANGELOG.md
-└── SECURITY.md
+cd projects/terminal_agents
+./setup.sh
 ```
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Exios66/JJB_Gallery?style=for-the-badge)
-
-***
-
-## Project Gallery
-
-| Project                             | Description                           | Link                                                                                 |
-| ----------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------ |
-| **CrewAI Multi-Agent Swarm System** | Multi-agent architecture using CrewAI | [CrewAI/README.md](/broken/pages/9833a9c14a9db6120496fae085e9919857d513d5)           |
-| **Terminal Agents**                 | AI coding agents for the terminal     | [terminal\_agents/README.md](/broken/pages/f0162fa1ec76503ed24a73f97c7cd49a631f4e3f) |
-| **Random Forest Essentials**        | Theory + application Quarto docs      | [Quarto/RandomForest](/broken/pages/00d2caeb080ba92ceeeafb9149dec827f6ffd235)        |
-| **Jupyter ML & Pandas Notebooks**   | Machine learning workflow demos       | [notebooks/](/broken/pages/a89c84c38be5726340f1b7a3d529780471a86e6f)                 |
-| **PyPI-Ready Python Template**      | Full CI/CD + packaging starter        | [Template Repo](https://github.com/Exios66/python-template)                          |
-| **RAG Model Application**           | Retrieval-Augmented Generation system | [RAG\_Model/README.md](/broken/pages/1d7cb1cba295f4b354acac4052e225966a4b1410)       |
-| **Psychometrics (NASA TLX)**        | Workload assessment toolkit           | [Psychometrics/README.md](/broken/pages/86028eafe1374cc309347477bd27702932651d4c)    |
-| **Chat UI**                         | Modern SvelteKit chat interface       | [ChatUi/README.md](/broken/pages/96ff088efa7e0ccc752281b1c659fb40cd2f86ba)           |
-| **LiteLLM Integration**             | Unified LLM API proxy                 | [litellm/README.md](/broken/pages/a0a44e524389436a8a87b3666217cdb637efb4c2)          |
-
-***
-
-## Production & Deployment
-
-This repository maintains production-grade standards for all included projects. Each major project is designed for scalability, reliability, and ease of deployment.
-
-### Deployment Options
+### Manual Setup
 
 {% stepper %}
 {% step %}
-### Docker Containers
+### Navigate to the project
 
-Most applications (ChatUi, iOS Chatbot, LiteLLM) include Dockerfiles for containerized deployment.
+```bash
+cd projects/terminal_agents
+```
 {% endstep %}
 
 {% step %}
-### Cloud Platforms
+### Create virtual environment
 
-Ready for deployment on AWS, Google Cloud, Azure, Vercel, and Netlify.
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 {% endstep %}
 
 {% step %}
-### Self-Hosted
+### Install dependencies
 
-Comprehensive guides for running on bare metal or virtual machines.
+```bash
+pip install -r requirements.txt
+```
+{% endstep %}
+
+{% step %}
+### Make agent executable
+
+```bash
+chmod +x agent.py
+```
 {% endstep %}
 {% endstepper %}
 
-### Production Readiness
+## ⚙️ Configuration
 
-* **CI/CD**: GitHub Actions workflows for automated testing and linting.
-* **Security**: Regular dependency scanning, API key management best practices, and security headers.
-* **Monitoring**: Health check endpoints and logging configuration.
-* **Documentation**: Detailed setup guides, API references, and troubleshooting.
+### Option 1: Environment Variables (Recommended)
 
-For detailed deployment guides, please refer to individual project READMEs or the [Quick Start Guide](/broken/pages/dbfc490dcaeab20b679114126a3df533950f5999).
+```bash
+# For OpenAI
+export OPENAI_API_KEY=your_api_key_here
 
-### Operational Runbooks
+# For Anthropic
+export ANTHROPIC_API_KEY=your_api_key_here
 
-* **Health Checks**: `/health` endpoints available on API services.
-* **Logging**: Structured logging configured for major services.
-* **Backup**: Procedures for backing up vector databases and chat history.
+# For Ollama (default, no key needed if running locally)
+export OLLAMA_BASE_URL=http://localhost:11434
+export OLLAMA_MODEL=llama3.1:8b
+```
+
+### Option 2: Config File
+
+Create `~/.terminal_agents/config.yaml`:
+
+```yaml
+# Provider selection (auto-detect if not set)
+provider: ollama  # Options: ollama, openai, anthropic, google, azure
+
+# Ollama (Free, Local)
+ollama_base_url: http://localhost:11434
+ollama_model: llama3.1:8b
+
+# OpenAI
+openai_api_key: your_key_here
+openai_model: gpt-4o-mini
+
+# Anthropic
+anthropic_api_key: your_key_here
+anthropic_model: claude-3-5-sonnet-20241022
+```
+
+### Option 3: Command Line Arguments
+
+```bash
+python agent.py --api-key your_key --provider openai --model gpt-4 chat "Hello"
+```
+
+## 🚀 Usage
+
+### Interactive Mode (Recommended)
+
+Start an interactive chat session:
+
+```bash
+python agent.py interactive
+
+# or
+./agent.py interactive
+```
+
+**Interactive Commands:**
+
+* `@analyze <file>` - Analyze code file
+* `@explain <file>` - Explain code file
+* `@generate <description>` - Generate code
+* `@fix <file>` - Fix code issues
+* `@refactor <file>` - Refactor code
+* `clear` - Clear conversation history
+* `save <file>` - Save conversation
+* `help` - Show help
+* `exit` - Exit interactive mode
+
+### Command-Line Commands
+
+#### Chat
+
+Send a message to the agent:
+
+```bash
+python agent.py chat "Explain Python decorators"
+```
+
+#### Analyze Code
+
+Analyze a code file:
+
+```bash
+python agent.py analyze app.py
+```
+
+#### Explain Code
+
+Explain a piece of code:
+
+```bash
+python agent.py explain "def fibonacci(n): return n if n < 2 else fibonacci(n-1) + fibonacci(n-2)"
+
+# or
+python agent.py explain app.py
+```
+
+#### Generate Code
+
+Generate code from a description:
+
+```bash
+python agent.py generate "A function to calculate factorial"
+```
+
+#### Fix Code
+
+Fix code issues:
+
+```bash
+python agent.py fix "def broken_function(x): return x / 0"
+
+# or
+python agent.py fix buggy_code.py
+```
+
+#### Refactor Code
+
+Refactor code for improvement:
+
+```bash
+python agent.py refactor app.py
+```
+
+### Help
+
+View all available commands:
+
+```bash
+python agent.py help
+```
+
+## 🏭 Production Considerations
+
+### CLI Distribution
+
+{% stepper %}
+{% step %}
+### PyPI Package
+
+Package the agent as a Python package and publish to a private PyPI repository.
+
+```bash
+python -m build
+twine upload dist/*
+```
+{% endstep %}
+
+{% step %}
+### Standalone Binary
+
+Use PyInstaller to create a single-file executable.
+
+```bash
+pyinstaller --onefile agent.py
+```
+{% endstep %}
+
+{% step %}
+### Docker Image
+
+Distribute as a Docker image for consistent environments.
+
+```bash
+docker run -it -v $(pwd):/app/code terminal-agent:latest
+```
+{% endstep %}
+{% endstepper %}
+
+### Configuration Management
+
+For team-wide configuration:
+
+{% stepper %}
+{% step %}
+### Shared Config
+
+Distribute a standard `config.yaml` to `~/.terminal_agents/` via configuration management tools (Ansible, Chef).
+{% endstep %}
+
+{% step %}
+### Environment Variables
+
+Enforce API keys via environment variables in CI/CD pipelines.
+{% endstep %}
+{% endstepper %}
+
+### Security Hardening
+
+{% stepper %}
+{% step %}
+### API Key Storage
+
+Never commit `config.yaml` with API keys to version control. Use a secrets manager (e.g., `keyring` python package) for local storage.
+{% endstep %}
+
+{% step %}
+### Input Sanitization
+
+The agent executes within the user's shell context. Ensure prompts do not contain malicious shell commands if piping input.
+{% endstep %}
+
+{% step %}
+### Audit Logging
+
+Enable logging to a file to audit agent usage and generated code.
+{% endstep %}
+{% endstepper %}
+
+## 🎯 Use Cases
+
+### Code Review
+
+```bash
+python agent.py analyze src/main.py
+```
+
+### Learning New Code
+
+```bash
+python agent.py explain "$(cat complex_algorithm.py)"
+```
+
+### Quick Code Generation
+
+```bash
+python agent.py generate "A REST API endpoint for user authentication"
+```
+
+### Debugging
+
+```bash
+python agent.py fix "$(cat buggy_code.py)"
+```
+
+### General Questions
+
+```bash
+python agent.py chat "What is the difference between async and await in Python?"
+```
+
+## 📦 Project Structure
+
+```
+terminal_agents/
+├── agent.py              # Main agent application
+├── config.py            # Configuration management
+├── llm_providers.py     # LLM provider implementations
+├── requirements.txt      # Python dependencies
+├── setup.sh             # Setup script
+├── DESIGN.md            # Design documentation
+└── README.md            # This file
+```
+
+## 🔧 Customization
+
+### Changing the Default Model
+
+Edit the default model in `config.py` or set environment variables:
+
+```bash
+export OLLAMA_MODEL=mistral:7b
+export OPENAI_MODEL_NAME=gpt-4
+```
+
+### Adding New Commands
+
+Add new command handlers in the `main()` function in `agent.py`.
+
+### Custom Prompts
+
+Modify prompt templates in the agent methods.
+
+## 🎨 Terminal UI
+
+The agent uses the `rich` library for beautiful terminal output:
+
+* **Colors**: Syntax highlighting and colored output
+* **Markdown**: Renders markdown in terminal
+* **Panels**: Beautiful bordered panels for help text
+* **Progress**: Progress indicators for long operations
+* **Syntax Highlighting**: Code blocks with syntax highlighting
+
+If `rich` is not available, the agent falls back to plain text output.
+
+## 🔐 Security & Safety
+
+* File write operations require explicit confirmation
+* API keys are never logged or displayed
+* Error messages are sanitized
+* Safe file path handling
+
+## 🐛 Troubleshooting
+
+### "No LLM provider available"
+
+**Solution**: Configure at least one provider:
+
+* Install Ollama: `curl -fsSL https://ollama.ai/install.sh | sh`
+* Or set API keys: `export OPENAI_API_KEY=your_key`
+
+### "Module not found" errors
+
+**Solution**: Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Ollama connection errors
+
+**Solution**: Ensure Ollama is running:
+
+```bash
+ollama serve
+
+# In another terminal:
+ollama pull llama3.1:8b
+```
+
+### Rich library not working
+
+**Solution**: The agent will fall back to plain text. To fix:
+
+```bash
+pip install rich pygments
+```
+
+## 📚 Examples
+
+### Example 1: Analyze Python File
+
+```bash
+python agent.py analyze my_script.py
+```
+
+### Example 2: Generate Code
+
+```bash
+python agent.py generate "A function to sort a list of dictionaries by a key"
+```
+
+### Example 3: Interactive Session
+
+```bash
+python agent.py interactive
+> @analyze app.py
+> @generate "A REST API with FastAPI"
+> @fix buggy_function.py
+> exit
+```
+
+### Example 4: With API Key
+
+```bash
+python agent.py --api-key your_key_here chat "Hello"
+```
+
+### Example 5: Pipe Code
+
+```bash
+cat code.py | python agent.py explain
+```
+
+## 🔗 Related Projects
+
+* [CrewAI](/broken/pages/3a0d53591b7daff0926c09abc341caabcf86ddf1) - Multi-agent system
+* [ChatUi](/broken/pages/13aae1e0e6bc76da20d441188d906bf94fe02b40) - Web-based chat interface
+* [OpenCode](https://opencode.ai/) - Inspiration for this project
+
+## 📝 License
+
+See main repository LICENSE file.
+
+## 🤝 Contributing
+
+Contributions welcome! Please read the main repository contributing guidelines.
+
+## 🙏 Acknowledgments
+
+Inspired by [OpenCode](https://opencode.ai/) and similar terminal-based AI coding assistants.
 
 ***
 
-## Architecture Overview
-
-The repository follows a modular architecture designed for interoperability and maintainability.
-
-### Core Components
-
-1. **Frontend Layer**: SvelteKit (ChatUi) and Flask templates (iOS Chatbot) providing user interfaces.
-2. **API Layer**: RESTful APIs and WebSocket connections handling communication.
-3. **Intelligence Layer**:
-   * **Orchestration**: CrewAI for multi-agent coordination.
-   * **Inference**: LiteLLM proxy for unified model access (OpenAI, Anthropic, Ollama).
-   * **Retrieval**: RAG Model with FAISS vector database.
-4. **Data Layer**:
-   * **Vector Store**: FAISS for semantic search.
-   * **Storage**: File-based storage and support for external drives (optimized for large models).
-5. **Infrastructure**: Docker containers and Python virtual environments.
-
-### Performance Considerations
-
-* **Caching**: Utilization of external storage for large model weights and pip/npm caches.
-* **Async Processing**: Asynchronous API calls for non-blocking operations in ChatUi and LiteLLM.
-* **Optimized Builds**: Minimal docker images and tree-shaking for frontend assets.
-
-***
-
-## Recent Additions
-
-* CrewAI Swarm System overhaul
-* Terminal Coding Agents improvements
-* Random Forest Quarto docs expansion
-* Production deployment guides for all major projects
-* Enhanced security policies and operational documentation
-
-***
-
-## Skills
-
-* **Programming:** Python, R, JavaScript, TypeScript, SvelteKit, Flask
-* **ML & Data:** Pandas, NumPy, scikit-learn, TensorFlow, PyTorch
-* **Visualization:** Matplotlib, Seaborn, Quarto, D3.js
-* **EngOps:** GitHub Actions, Docker, Kubernetes, pre-commit
-* **Documentation:** Jupyter, Markdown, Quarto, Technical Writing
-* **AI Engineering:** RAG, Vector Databases, LLM Integration, Agent Systems
-
-***
-
-## Presentations
-
-* _Random Forest Essentials_ – 2024
-* _Talking to Agents_ – 2024
-* _(More added continuously…)_
-
-***
-
-## Preferred Contact Methods
-
-📩 [jackjburleson@proton.me](mailto:jackjburleson@proton.me) (Business)\
-📩 [jjburleson@wisc.edu](mailto:jjburleson@wisc.edu) (Academic)\
-🌐 [https://github.com/Exios66](https://github.com/Exios66)\
-🔗 [https://linkedin.com/in/jack-j-burleson](https://linkedin.com/in/jack-j-burleson)
-
-***
-
-## Socials
-
-* [GitHub](https://github.com/Exios66)
-* [HuggingFace](https://huggingface.co/Exios66)
-* [Twitter/X](https://twitter.com/Exios66)
-
-***
-
-## Further Reading
-
-* [CrewAI System](/broken/pages/9833a9c14a9db6120496fae085e9919857d513d5)
-* [Terminal Agents](/broken/pages/f0162fa1ec76503ed24a73f97c7cd49a631f4e3f)
-* [Documentation Index](/broken/pages/1debacff0870a71d93f50a7fab07ec4309018e0a) - Comprehensive documentation
-* [CHANGELOG.md](docs/changelog.md)
-
-## 📚 Documentation
-
-Comprehensive documentation is available in the [`docs/`](/broken/pages/18688bb33204805ec90d35badd6ca076ad73980c) directory:
-
-* [**Setup & Configuration**](docs/setup_guide.md) - Setup guides and configuration
-* [**Development**](/broken/pages/c2719d7d005f70f5bf1f230a98288783bfd076dc) - Development guides
-* [**Security**](docs/security-policy.md) - Security policies
-* [**Scripts**](docs/scripts-documentation.md) - Script documentation
-* [**Projects**](projects/) - Project-specific documentation
-
-***
+**Made with ❤️ for developers who love the terminal**

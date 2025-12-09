@@ -1,222 +1,239 @@
----
-icon: file-chart-pie
----
+# README
 
-# PROJECTS
+A comprehensive psychometric assessment toolkit implementing the NASA Task Load Index (TLX) and related workload measurement tools.
 
-This directory contains multiple AI and ML projects, each with its own implementation and documentation.
+## Overview
 
-## Available Projects
+This project provides tools for conducting psychometric assessments, particularly focused on workload measurement using the NASA Task Load Index (TLX). The TLX is a widely-used tool for assessing the subjective workload experienced by users when performing tasks.
 
-### 🤖 [RAG\_Model](/broken/pages/3d9a228fed6814ed0ca2d013f5da30f262d6614a)
+## Features
 
-Retrieval-Augmented Generation system with vector database, embeddings, and intelligent document retrieval.
+* **NASA TLX Implementation**: Complete implementation of the NASA Task Load Index
+* **Raw TLX Scores**: Unweighted average of six workload dimensions
+* **Weighted TLX Scores**: Weighted scores based on pairwise comparisons
+* **Interactive CLI**: Command-line interface for data collection
+* **Data Export**: JSON export for analysis
+* **Statistical Analysis**: Aggregate statistics across multiple assessments
+* **REST API**: Production-ready API for remote assessment collection
 
-**Quick Start:**
+## NASA Task Load Index (TLX)
+
+The NASA TLX measures workload across six dimensions:
+
+{% stepper %}
+{% step %}
+### Mental Demand
+
+How mentally demanding was the task?
+{% endstep %}
+
+{% step %}
+### Physical Demand
+
+How physically demanding was the task?
+{% endstep %}
+
+{% step %}
+### Temporal Demand
+
+How hurried or rushed was the pace?
+{% endstep %}
+
+{% step %}
+### Performance
+
+How successful were you in accomplishing the task?
+{% endstep %}
+
+{% step %}
+### Effort
+
+How hard did you have to work?
+{% endstep %}
+
+{% step %}
+### Frustration
+
+How insecure, discouraged, or annoyed were you?
+{% endstep %}
+{% endstepper %}
+
+Each dimension is rated on a scale of 1-20, where:
+
+* 1 = Very Low
+* 20 = Very High
+
+(Note: Performance is inverted - 1 = Perfect, 20 = Failure)
+
+## Installation
+
+### Basic Installation
 
 ```bash
-cd RAG_Model
 pip install -r requirements.txt
+```
+
+### Production Setup
+
+```bash
+# Install with production dependencies (gunicorn, postgres driver)
+pip install -r requirements.txt psycopg2-binary gunicorn
+```
+
+## Usage
+
+### Command-Line Interface
+
+Run the interactive assessment tool:
+
+```bash
 python main.py
 ```
 
-### 📊 [Psychometrics](/broken/pages/9e658a1a539062c69de7150208587c35da788ee4)
+### Programmatic Usage
 
-NASA Task Load Index (TLX) assessment tool for measuring workload and cognitive demand.
+```python
+from nasa_tlx import NASATLX
 
-**Quick Start:**
+# Initialize system
+tlx = NASATLX()
 
-```bash
-cd Psychometrics
-pip install -r requirements.txt
-python main.py
+# Create assessment
+result = tlx.create_assessment(
+    task_name="User Interface Evaluation",
+    participant_id="P001"
+)
+
+# Add ratings
+tlx.add_rating(
+    result,
+    mental_demand=15,
+    physical_demand=3,
+    temporal_demand=12,
+    performance=5,
+    effort=14,
+    frustration=8
+)
+
+# Calculate scores
+tlx.calculate_scores(result)
+print(f"Raw TLX Score: {result.raw_tlx_score:.2f}")
 ```
 
-### 💬 [ChatUi](/broken/pages/f43ffcfbdda03b622a6547ca7ac38e4ee74b40a2)
+## 🏭 Production Deployment
 
-Modern SvelteKit chat interface for interacting with LLM models.
+### Deployment Strategy
 
-**Quick Start:**
+Deploy as a REST API service to collect assessments from web or mobile clients.
+
+### Docker Deployment
+
+{% stepper %}
+{% step %}
+### Dockerfile
+
+```dockerfile
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt gunicorn
+COPY . .
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "api:app"]
+```
+{% endstep %}
+
+{% step %}
+### Run Container
 
 ```bash
-cd ChatUi
-npm install
-npm run dev
+docker run -d -p 8000:8000 \
+  -e DATABASE_URL=postgresql://user:pass@db:5432/psychometrics \
+  psychometrics-api:latest
 ```
-
-### 📱 [ios\_chatbot](/broken/pages/7c2b4f745ac2b959b7ad7de028bf929f3bb3823d)
-
-iOS-inspired chatbot with Flask backend and beautiful gradient UI.
-
-**Quick Start:**
-
-```bash
-cd ios_chatbot
-pip install -r requirements.txt
-python app.py
-```
-
-### 🔌 [litellm](/broken/pages/6f12322bea3aa3319f72dee6b1aaf6eadd25257e)
-
-LiteLLM integration with proxy server for unified LLM API access.
-
-**Quick Start:**
-
-```bash
-cd litellm
-pip install -r requirements.txt
-python proxy_server.py
-```
-
-### 🤝 [CrewAI](/broken/pages/4fe85f52381da51e732721e273df7118cee54cae)
-
-Multi-agent system using CrewAI for complex workflows and task automation.
-
-**Quick Start:**
-
-```bash
-cd Crewai
-pip install -r requirements.txt
-python main.py --setup
-```
-
-### ⌨️ [terminal\_agents](/broken/pages/ce3814607f0c3105dbc68c0cbeabb8099c139776)
-
-AI coding agents for the terminal, similar to OpenCode.
-
-## Setup
-
-### Quick Setup (All Projects)
-
-```bash
-# Install all dependencies
-chmod +x setup_all.sh
-./setup_all.sh
-```
-
-### Individual Setup
-
-See [SETUP\_GUIDE.md](/broken/pages/23af0abc1d80415f70cd9a39c2e4abf97cb23fdd) for detailed instructions.
-
-## Testing
-
-### Test All Projects
-
-```bash
-chmod +x test_all.sh
-./test_all.sh
-```
-
-### Test Individual Projects
-
-See each project's README for specific testing instructions.
-
-## Documentation
-
-* [**SETUP\_GUIDE.md**](/broken/pages/23af0abc1d80415f70cd9a39c2e4abf97cb23fdd) - Complete setup instructions
-* [**QUICK\_START.md**](/broken/pages/e63bdfce992b5de7dd53bf2c6ad8afa8129bf385) - Quick start guide
-* Each project has its own README with detailed documentation
-
-## Requirements
+{% endstep %}
+{% endstepper %}
 
 {% hint style="info" %}
-* Python 3.8+
-* Node.js 18+ (for ChatUi)
-* pip and npm
+Data Privacy & Compliance:
+
+* **GDPR/HIPAA**: Store participant IDs as anonymized hashes. Do not store PII (Personally Identifiable Information) in the assessment database.
+* **Data Retention**: Configure automated deletion policies for raw data after the retention period expires.
+* **Access Control**: Restrict database access to authorized researchers only.
 {% endhint %}
 
-## Optional Dependencies
+### Database Setup
 
-* Ollama (for local LLM models)
-* MongoDB (for ChatUi chat history)
-* API Keys (OpenAI, Anthropic, etc.)
+For production, use PostgreSQL instead of SQLite:
 
-## Project Status
+```sql
+CREATE TABLE assessments (
+    id UUID PRIMARY KEY,
+    participant_hash VARCHAR(64),
+    task_name VARCHAR(255),
+    ratings JSONB,
+    scores JSONB,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+```
 
-| Project          | Status     | Dependencies | API Keys Required |
-| ---------------- | ---------- | ------------ | ----------------- |
-| RAG\_Model       | ✅ Complete | Python       | Optional          |
-| Psychometrics    | ✅ Complete | Python       | No                |
-| ChatUi           | ✅ Complete | Node.js      | Optional          |
-| ios\_chatbot     | ✅ Complete | Python       | Optional          |
-| litellm          | ✅ Complete | Python       | Optional          |
-| CrewAI           | ✅ Complete | Python       | Yes               |
-| terminal\_agents | ✅ Complete | Python       | Yes               |
+### Monitoring
 
-## Getting Started
+* **Application Metrics**: Track API latency and error rates.
+* **Business Metrics**: Track number of completed assessments per day.
+* **Data Quality**: Monitor for anomalies in rating distributions (e.g., all 1s or all 20s).
 
-{% stepper %}
-{% step %}
-### Read setup guide
+## API Documentation
 
-Read [SETUP\_GUIDE.md](/broken/pages/23af0abc1d80415f70cd9a39c2e4abf97cb23fdd) for detailed setup instructions.
-{% endstep %}
+### `POST /api/v1/assessments`
 
-{% step %}
-### Choose a project
+Submit a new assessment.
 
-Select a project that interests you from the Available Projects list.
-{% endstep %}
+**Request:**
 
-{% step %}
-### Follow project README
+```json
+{
+  "task_name": "Task A",
+  "participant_id": "P001",
+  "ratings": {
+    "mental_demand": 15,
+    "physical_demand": 5,
+    "temporal_demand": 10,
+    "performance": 2,
+    "effort": 12,
+    "frustration": 6
+  }
+}
+```
 
-Follow the chosen project's README for specific instructions.
-{% endstep %}
+**Response:**
 
-{% step %}
-### Set environment variables
+```json
+{
+  "id": "uuid",
+  "raw_tlx": 8.33,
+  "status": "success"
+}
+```
 
-Set up environment variables required by the project as described in its documentation.
-{% endstep %}
+### `GET /api/v1/stats/{task_name}`
 
-{% step %}
-### Test the project
+Get aggregate statistics for a task.
 
-Run the project's tests or quick start commands to ensure it works.
-{% endstep %}
-{% endstepper %}
+## Scoring Methods
 
-## Contributing
+### Raw TLX Score
 
-{% stepper %}
-{% step %}
-### Read the project's README
+Raw TLX = (Mental + Physical + Temporal + Performance + Effort + Frustration) / 6
 
-Open the README for the project you want to contribute to and follow its contribution guidelines.
-{% endstep %}
+### Weighted TLX Score
 
-{% step %}
-### Follow coding standards
+Uses pairwise comparisons to determine dimension weights.
 
-Adhere to the project's coding standards and style.
-{% endstep %}
+## References
 
-{% step %}
-### Test your changes
-
-Run tests and verify your changes work as expected.
-{% endstep %}
-
-{% step %}
-### Update documentation
-
-Update any relevant documentation to reflect your changes.
-{% endstep %}
-{% endstepper %}
-
-## Support
-
-<details>
-
-<summary>How to get help</summary>
-
-1. Check the project's README
-2. Review [SETUP\_GUIDE.md](/broken/pages/23af0abc1d80415f70cd9a39c2e4abf97cb23fdd)
-3. Check the main repository documentation
-
-</details>
+* Hart, S. G., & Staveland, L. E. (1988). Development of NASA-TLX.
+* [NASA TLX Official Documentation](https://humansystems.arc.nasa.gov/groups/tlx/)
 
 ## License
 
-See the main repository LICENSE file.
+See main repository LICENSE file.
